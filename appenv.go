@@ -41,7 +41,7 @@ func (e AppEnv) String() string {
 	}
 }
 
-// AtoE converts from string to Env.
+// AtoE converts from string to AppEnv.
 func AtoE(str string) AppEnv {
 	str = strings.ToLower(str)
 	switch str {
