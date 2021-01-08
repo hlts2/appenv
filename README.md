@@ -14,6 +14,15 @@ Go 1.15
 go get github.com/hlts2/appenv
 ```
 
+## Possible environment
+
+- test
+- local
+- development
+- staging
+- production
+- unknown
+
 
 ## Example
 
