@@ -31,15 +31,6 @@ func Test_AppEnv_String(t *testing.T) {
 			},
 		},
 		{
-			name: "return 'local' when env is 'Local'",
-			args: args{
-				env: Local,
-			},
-			want: want{
-				want: "local",
-			},
-		},
-		{
 			name: "return 'development' when env is 'Dev'",
 			args: args{
 				env: Dev,
@@ -119,24 +110,6 @@ func TestAtoE(t *testing.T) {
 			},
 			want: want{
 				want: Test,
-			},
-		},
-		{
-			name: "return 'Local' when str is 'local'",
-			args: args{
-				str: "local",
-			},
-			want: want{
-				want: Local,
-			},
-		},
-		{
-			name: "return 'Local' when str is 'loCAl'",
-			args: args{
-				str: "loCAL",
-			},
-			want: want{
-				want: Local,
 			},
 		},
 		{
@@ -275,36 +248,6 @@ func Test_Env(t *testing.T) {
 			},
 			want: want{
 				want: Test,
-			},
-		},
-		{
-			name: "return Local when key is 'APP_ENV' and value of 'APP_ENV' key is 'local'",
-			args: args{
-				key: "APP_ENV",
-			},
-			beforeFunc: func() error {
-				if err := os.Setenv("APP_ENV", "local"); err != nil {
-					return err
-				}
-				return nil
-			},
-			want: want{
-				want: Local,
-			},
-		},
-		{
-			name: "return Test when key is 'APP_ENV' and value of 'APP_ENV' key is 'loCAl'",
-			args: args{
-				key: "APP_ENV",
-			},
-			beforeFunc: func() error {
-				if err := os.Setenv("APP_ENV", "loCAL"); err != nil {
-					return err
-				}
-				return nil
-			},
-			want: want{
-				want: Local,
 			},
 		},
 		{

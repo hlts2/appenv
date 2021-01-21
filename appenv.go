@@ -13,8 +13,6 @@ const (
 	Unknown AppEnv = iota
 	// Test represents the test environment.
 	Test
-	// Local represents the local environment.
-	Local
 	// Dev represents the development environment.
 	Dev
 	// Stg represents the staging environment.
@@ -28,8 +26,6 @@ func (e AppEnv) String() string {
 	switch e {
 	case Test:
 		return "test"
-	case Local:
-		return "local"
 	case Dev:
 		return "development"
 	case Stg:
@@ -47,8 +43,6 @@ func AtoE(str string) AppEnv {
 	switch str {
 	case Test.String():
 		return Test
-	case Local.String():
-		return Local
 	case Dev.String():
 		return Dev
 	case Stg.String():

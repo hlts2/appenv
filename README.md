@@ -38,8 +38,6 @@ func main() {
 	switch env {
 	case appenv.Test:
 		fmt.Println(env.String()) // test
-	case appenv.Local:
-		fmt.Println(env.String()) // local
 	case appenv.Dev:
 		fmt.Println(env.String()) // development
 	case appenv.Stg:
